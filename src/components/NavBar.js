@@ -54,7 +54,7 @@ export const NavBar = () => {
                 <a href="https://wa.me/6282229377661/"><img src={navIcon2} alt="" /></a>
                 <a href="https://www.instagram.com/yoggiif/"><img src={navIcon3} alt="" /></a>
               </div>
-              <a href="/YOGI_FIRMANSYAH.pdf" download>
+              <a href="/CV YOGI_FIRMANSYAH.pdf" download>
                 <button className="vvd"><span>Download CV</span></button>
               </a>
             </span>
