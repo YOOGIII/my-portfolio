@@ -410,7 +410,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   line-height: 1.5em;
   margin: 14px auto 30px auto;
   text-align: center;
-  width: 56%;
+  width: 100%;
 }
 .project .nav.nav-pills {
   width: 72%;
@@ -470,7 +470,16 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-radius: 30px;
   overflow: hidden;
   margin-bottom: 24px;
+  width: 100%; /* Pastikan semua kartu memiliki lebar penuh */
+  height: 250px; /* Tetapkan tinggi seragam */
 }
+
+.proj-imgbx img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Gambar memenuhi area dengan proporsi yang benar */
+}
+
 .proj-imgbx::before {
   content: "";
   background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
@@ -478,37 +487,44 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   position: absolute;
   width: 100%;
   height: 0;
-  transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out; /* Overlay animasi muncul */
 }
+
 .proj-imgbx:hover::before {
-  height: 100%;
+  height: 100%; /* Overlay muncul sepenuhnya saat hover */
 }
+
 .proj-txtx {
   position: absolute;
   text-align: center;
   top: 65%;
   left: 50%;
   transform: translate(-50%, -50%);
-  transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out; /* Teks animasi muncul */
   opacity: 0;
   width: 100%;
+  color: #fff;
 }
+
 .proj-imgbx:hover .proj-txtx {
-  top: 50%;
-  opacity: 1;
+  top: 50%; /* Teks bergerak ke tengah saat hover */
+  opacity: 1; /* Teks muncul sepenuhnya */
 }
+
 .proj-txtx h4 {
   font-size: 30px;
   font-weight: 700;
   letter-spacing: 0.8px;
   line-height: 1.1em;
 }
+
 .proj-txtx span {
   font-style: italic;
   font-weight: 400;
   font-size: 15px;
   letter-spacing: 0.8px;
 }
+
 .background-image-right {
   top: 20%;
   position: absolute;
@@ -589,6 +605,163 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .contact form button:hover::before {
   width: 100%;
 }
+
+/************ Experience Styles ************/
+.experience-card {
+  background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.6) -5.91%, rgba(74, 47, 189, 0.6) 111.58%);
+  border-radius: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  max-width: 400px; /* Membatasi ukuran card agar tidak terlalu besar */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.experience-card h5 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.experience-card p {
+  font-size: 1rem;
+  color: #fff;
+  margin-bottom: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Membatasi teks untuk hanya 3 baris pertama */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.experience-card strong {
+  font-weight: 600;
+  color: #fff;
+}
+
+.experience-card .details-btn {
+  background-color: #4a2fbd;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.experience-card .details-btn:hover {
+  background-color: #3a239b;
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Gradasi untuk background modal */
+.modal-content {
+  background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.6) -5.91%, rgba(74, 47, 189, 0.6) 111.58%);
+  border-radius: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Untuk mengubah tombol modal agar serasi dengan warna gradasi */
+.modal-header button {
+  background-color: rgba(170, 54, 124, 0.6);
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modal-header button:hover {
+  background-color: rgba(74, 47, 189, 0.6);
+}
+
+/* Atur teks dalam modal supaya lebih terlihat */
+.modal-body p {
+  color: white;
+}
+
+
+@media (max-width: 768px) {
+  .experience-card {
+    padding: 15px;
+    max-width: 100%; /* Lebar card akan mengikuti lebar layar kecil */
+  }
+
+  .experience-card h5 {
+    font-size: 1rem;
+  }
+
+  .experience-card p {
+    font-size: 0.9rem;
+  }
+}
+
+/************ Achievements Styles ************/
+.achievements-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.achievement-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  color: #fff;
+  transition: 0.3s ease-in-out;
+}
+
+.achievement-card:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-5px);
+}
+
+.achievement-card img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.achievement-card h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.achievement-card p {
+  font-size: 16px;
+  color: #b8b8b8;
+  line-height: 1.5em;
+}
+
+/************ Responsive Design ************/
+@media (max-width: 768px) {
+  .achievements-container {
+    gap: 20px;
+  }
+
+  .achievement-card {
+    width: 100%;
+    padding: 15px;
+  }
+}
+
 
 /************ Footer Css ************/
 .footer {

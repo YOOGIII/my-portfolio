@@ -24,7 +24,7 @@ const Tools = () => {
         </div>
         <div className="tool-item">
           <FaGithub size={50} />
-          <p>ChatGPT</p>
+          <p>Github</p>
         </div>
       </div>
     </section>

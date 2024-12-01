@@ -27,24 +27,30 @@ const Skills = () => {
   };
 
   const chartData = {
-    labels: ['Prototyping', 'Usability Testing', 'Visual Design', 'User Research', 'Wireframing', 'Storyboarding'],
+    labels: ['Prototyping', 'Usability Testing', 'Visual Design', 'User Research', 'Wireframing', 'Storyboarding', 'HTML', 'CSS'],
     datasets: [
       {
         label: 'Skills Overview',
-        data: [95, 90, 95, 80, 93],
+        data: [95, 90, 95, 80, 93, 85, 97, 95],
         backgroundColor: [
           'rgba(255, 99, 132, 0.2)',
           'rgba(54, 162, 235, 0.2)',
           'rgba(255, 159, 64, 0.2)',
           'rgba(75, 192, 192, 0.2)',
-          'rgba(153, 102, 255, 0.2)'
+          'rgba(153, 102, 255, 0.2)',
+          'rgba(255, 159, 64, 0.2)',
+          'rgba(75, 192, 192, 0.2)',
+          'rgba(54, 162, 235, 0.2)',
         ],
         borderColor: [
           'rgba(255, 99, 132, 1)',
           'rgba(54, 162, 235, 1)',
           'rgba(255, 159, 64, 1)',
           'rgba(75, 192, 192, 1)',
-          'rgba(153, 102, 255, 1)'
+          'rgba(153, 102, 255, 1)',
+          'rgba(255, 159, 64, 1)',
+          'rgba(75, 192, 192, 1)',
+          'rgba(54, 162, 235, 1)',
         ],
         borderWidth: 1
       }

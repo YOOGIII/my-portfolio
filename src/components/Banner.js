@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import headerImg from "../assets/img/header-img.svg";
+import headerImg from "../assets/img/uni.png";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -56,7 +56,14 @@ export const Banner = () => {
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <h1>{`Hi! I'm Yogi`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "FrontEnd Developer", "Web Designer", "UI/UX Designer" ]'><span className="wrap">{text}</span></span></h1>
-                <p>As a Software Engineering graduate, I’m currently interning as a UI/UX Designer at PT Global Service Indonesia. I specialize in creating responsive user interfaces and intuitive user experiences. Through two key UI projects, I’ve enhanced my skills, focusing on delivering designs that are both functional and visually appealing.</p>                  <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
+                <p>
+                  A Software Engineering graduate with a passion for UI/UX Design and Web Development. 
+                  Experienced in designing responsive interfaces and developing web apps using HTML, CSS, JavaScript, Bootstrap, and Figma. 
+                  Skilled in programming, software testing, and project management. Seeking opportunities to grow in design and technology.
+                </p>
+                <button onClick={() => window.location.href = 'https://www.linkedin.com/in/yogi-firmansyah'}>
+                  Let’s Connect <ArrowRightCircle size={25} />
+                </button>
               </div>}
             </TrackVisibility>
           </Col>
