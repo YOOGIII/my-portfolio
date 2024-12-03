@@ -157,7 +157,7 @@ export const Projects = () => {
     {
       title: "IT Programmer",
       description: "UT School",
-      year: "Mei 2024 - Jul 2024",
+      year: "May 2024 - Jul 2024",
       fullDescription: `Developed a library website using PHP Laravel, React.js, and React Native for the mobile application as a final competency project.
         Learned frontend development using HTML, CSS, JavaScript, and Bootstrap.
         Involved in a website project with a focus on creating responsive and engaging UI designs.
